@@ -4,6 +4,9 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./components/Home";
+import Profile from "./components/Profile";
+import Contact from "./components/Contact";
+import Chat from "./components/Chat";
 
 const Stack = createStackNavigator();
 
@@ -16,7 +19,9 @@ export default function App() {
           component={Home}
           options={{ title: "Welcome" }}
         />
-        {/* <Stack.Screen name="Profile" component={Profile} /> */}
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Chat" component={Chat} />
+        <Stack.Screen name="Contact" component={Contact} />
       </Stack.Navigator>
     </NavigationContainer>
   );
