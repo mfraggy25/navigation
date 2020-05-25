@@ -26,4 +26,4 @@ function MyTabs() {
   );
 }
 
-export default MyTabs();
+export default MyTabs;
