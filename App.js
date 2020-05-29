@@ -9,13 +9,17 @@ import Profile from "./components/Profile";
 import Contact from "./components/Contact";
 import Chat from "./components/Chat";
 import MaterialBottomTabs from "./components/MaterialBottomTabs";
+import MaterialTopTabs from "./components/MaterialTopTabs";
 import StackNavigator from "./components/StackNavigator";
+import MyDrawer from "./components/MyDrawer";
 
 export default function App() {
   return (
     <NavigationContainer>
       {/* <StackNavigator /> */}
-      <MaterialBottomTabs />
+      {/* <MaterialTopTabs /> */}
+      {/* <MaterialBottomTabs /> */}
+      <MyDrawer />
     </NavigationContainer>
   );
 }
