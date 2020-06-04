@@ -19,6 +19,9 @@ import MaterialTopTabs from "./components/MaterialTopTabs";
 import StackNavigator from "./components/StackNavigator";
 import MyDrawer from "./components/MyDrawer";
 import MainTabScreen from "./components/MainTabScreen";
+import Bookmark from "./components/Bookmark";
+import Settings from "./components/Settings";
+import Support from "./components/Support";
 
 const Drawer = createDrawerNavigator();
 
@@ -30,7 +33,12 @@ export default function App() {
       {/* <MaterialBottomTabs /> */}
       {/* <MyDrawer /> */}
       {/* <MainTabScreen /> */}
-      <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
+      <Drawer.Navigator>
+        <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
+        <Drawer.Screen name="BookmarkDrawer" component={Bookmark} />
+        <Drawer.Screen name="SettingsDrawer" component={Settings} />
+        <Drawer.Screen name="SupportDrawer" component={Support} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
