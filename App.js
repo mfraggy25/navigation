@@ -33,11 +33,11 @@ export default function App() {
       {/* <MaterialBottomTabs /> */}
       {/* <MyDrawer /> */}
       {/* <MainTabScreen /> */}
-      <Drawer.Navigator>
+      <Drawer.Navigator drawerContent={(props) => <MyDrawer {...props} />}>
         <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
-        <Drawer.Screen name="BookmarkDrawer" component={Bookmark} />
-        <Drawer.Screen name="SettingsDrawer" component={Settings} />
-        <Drawer.Screen name="SupportDrawer" component={Support} />
+        <Drawer.Screen name="BookmarkScreen" component={Bookmark} />
+        <Drawer.Screen name="SettingScreen" component={Settings} />
+        <Drawer.Screen name="SupportScreen" component={Support} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

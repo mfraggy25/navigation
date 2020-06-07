@@ -33,7 +33,7 @@ const MainTabScreen = () => (
     />
     <Tab.Screen
       name="Profile"
-      component={Profile}
+      component={ProfileStackScreen}
       options={{
         tabBarLabel: "Profile",
         tabBarColor: "red",
@@ -44,7 +44,7 @@ const MainTabScreen = () => (
     />
     <Tab.Screen
       name="Contact"
-      component={Contact}
+      component={ContactStackScreen}
       options={{
         tabBarLabel: "Contact",
         tabBarColor: "blue",
@@ -55,7 +55,7 @@ const MainTabScreen = () => (
     />
     <Tab.Screen
       name="Chat"
-      component={Chat}
+      component={ChatStackScreen}
       options={{
         tabBarLabel: "Chat Room",
         tabBarColor: "brown",
@@ -97,4 +97,94 @@ const HomeStackScreen = ({ navigation }) => (
       }}
     />
   </HomeStack.Navigator>
+);
+
+const ProfileStackScreen = ({ navigation }) => (
+  <ProfileStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: "#009387",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold",
+      },
+    }}
+  >
+    <ProfileStack.Screen
+      name="Profile"
+      component={Profile}
+      options={{
+        title: "Profile",
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#009387"
+            onPress={() => navigation.openDrawer()}
+          ></Icon.Button>
+        ),
+      }}
+    />
+  </ProfileStack.Navigator>
+);
+
+const ContactStackScreen = ({ navigation }) => (
+  <ContactStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: "#009387",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold",
+      },
+    }}
+  >
+    <ContactStack.Screen
+      name="Contact"
+      component={Contact}
+      options={{
+        title: "Contact",
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#009387"
+            onPress={() => navigation.openDrawer()}
+          ></Icon.Button>
+        ),
+      }}
+    />
+  </ContactStack.Navigator>
+);
+
+const ChatStackScreen = ({ navigation }) => (
+  <ChatStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: "#009387",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold",
+      },
+    }}
+  >
+    <ChatStack.Screen
+      name="Chat"
+      component={Chat}
+      options={{
+        title: "Chat",
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#009387"
+            onPress={() => navigation.openDrawer()}
+          ></Icon.Button>
+        ),
+      }}
+    />
+  </ChatStack.Navigator>
 );
