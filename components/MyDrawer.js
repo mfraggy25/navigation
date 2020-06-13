@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, DarkTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./Home";
 import Profile from "./Profile";
@@ -29,6 +29,10 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 // const Drawer = createDrawerNavigator();
 
 function MyDrawer(props) {
+  const [isDarkTheme, setIsDarkTheme] = React.useState(false);
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
   return (
     // <Drawer.Navigator>
     //   <Drawer.Screen name="Home" component={Home} />
@@ -115,6 +119,20 @@ function MyDrawer(props) {
                 props.navigation.navigate("SupportScreen");
               }}
             />
+          </Drawer.Section>
+          <Drawer.Section title="Preferences">
+            <TouchableRipple
+              onPress={() => {
+                toggleTheme();
+              }}
+            >
+              <View style={styles.preference}>
+                <Text>Dark Theme</Text>
+                <View pointerEvents="none">
+                  <Switch value={isDarkTheme} />
+                </View>
+              </View>
+            </TouchableRipple>
           </Drawer.Section>
         </View>
       </DrawerContentScrollView>
