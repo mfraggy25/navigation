@@ -16,10 +16,11 @@ const SplashScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+        <Text style={styles.title}>THE VINYL LIFE</Text>
         <Image
           source={require("../assets/VinylLogo.png")}
           style={styles.logo}
-          resizeMode="stretch"
+          resizeMode="cover"
         />
       </View>
       <View style={styles.footer}>
@@ -40,7 +41,7 @@ const height_logo = height * 0.28;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#009387",
+    backgroundColor: "#edbbf6",
   },
   header: {
     flex: 2,
