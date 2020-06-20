@@ -12,8 +12,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Feather from "react-native-vector-icons/Feather";
+import MainTabScreen from "./MainTabScreen";
 
-const SignInScreen = () => {
+const SignInScreen = ({ navigation }) => {
   const [data, setData] = React.useState({
     username: "",
     password: "",
@@ -86,6 +87,10 @@ const SignInScreen = () => {
             )}
           </TouchableOpacity>
         </View>
+        <Button
+          title="Login"
+          onPress={() => navigation.navigate("MainTabScreen")}
+        />
       </View>
     </View>
   );

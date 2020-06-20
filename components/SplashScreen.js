@@ -7,6 +7,7 @@ import {
   Button,
   Dimensions,
   Image,
+  TouchableOpacity,
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -24,12 +25,14 @@ const SplashScreen = ({ navigation }) => {
         />
       </View>
       <View style={styles.footer}>
-        <Text>Stay connected!</Text>
-        <Text>Sign In</Text>
-        <Button
-          title="Click here"
-          onPress={() => navigation.navigate("SignInScreen")}
-        />
+        <Text style={styles.title}>Stay connected!</Text>
+        <Text style={styles.text}>Sign In</Text>
+        <TouchableOpacity>
+          <Button
+            title="Click here"
+            onPress={() => navigation.navigate("SignInScreen")}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

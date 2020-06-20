@@ -11,12 +11,30 @@ import Home from "./Home";
 import Profile from "./Profile";
 import Contact from "./Contact";
 import Chat from "./Chat";
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from "@react-navigation/drawer";
+import MyDrawer from "./MyDrawer";
 
 const HomeStack = createStackNavigator();
 const ProfileStack = createStackNavigator();
 const ContactStack = createStackNavigator();
 const ChatStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
+
+// const Drawer = createDrawerNavigator();
+// const MyDrawerScreen = () => (
+//   <Drawer.Navigator drawerContent={(props) => <MyDrawer {...props} />}>
+//     <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
+//     <Drawer.Screen name="BookmarkScreen" component={Bookmark} />
+//     <Drawer.Screen name="SettingScreen" component={Settings} />
+//     <Drawer.Screen name="SupportScreen" component={Support} />
+//   </Drawer.Navigator>
+// );
+// export default MyDrawerScreen;
 
 const MainTabScreen = () => (
   <Tab.Navigator initialRouteName="Home" activeColor="#f0edf6">
