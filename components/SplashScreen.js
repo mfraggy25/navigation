@@ -26,10 +26,16 @@ const SplashScreen = ({ navigation }) => {
       </View>
       <View style={styles.footer}>
         <Text style={styles.title}>Stay connected!</Text>
+        <TouchableOpacity>
+          <Button
+            title="Register"
+            onPress={() => navigation.navigate("SignUpScreen")}
+          />
+        </TouchableOpacity>
         <Text style={styles.text}>Sign In</Text>
         <TouchableOpacity>
           <Button
-            title="Click here"
+            title="Sign In"
             onPress={() => navigation.navigate("SignInScreen")}
           />
         </TouchableOpacity>

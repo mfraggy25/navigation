@@ -18,6 +18,9 @@ import {
   DrawerItem,
 } from "@react-navigation/drawer";
 import MyDrawer from "./MyDrawer";
+import Bookmark from "./Profile";
+import Settings from "./Settings";
+import Support from "./Support";
 
 const HomeStack = createStackNavigator();
 const ProfileStack = createStackNavigator();
@@ -27,12 +30,14 @@ const Tab = createMaterialBottomTabNavigator();
 
 // const Drawer = createDrawerNavigator();
 // const MyDrawerScreen = () => (
-//   <Drawer.Navigator drawerContent={(props) => <MyDrawer {...props} />}>
-//     <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
-//     <Drawer.Screen name="BookmarkScreen" component={Bookmark} />
-//     <Drawer.Screen name="SettingScreen" component={Settings} />
-//     <Drawer.Screen name="SupportScreen" component={Support} />
-//   </Drawer.Navigator>
+{
+  /* <Drawer.Navigator drawerContent={(props) => <MyDrawer {...props} />}>
+  <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
+  <Drawer.Screen name="BookmarkScreen" component={Bookmark} />
+  <Drawer.Screen name="SettingScreen" component={Settings} />
+  <Drawer.Screen name="SupportScreen" component={Support} />
+</Drawer.Navigator>; */
+}
 // );
 // export default MyDrawerScreen;
 

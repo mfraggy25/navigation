@@ -24,7 +24,7 @@ import Settings from "./components/Settings";
 import Support from "./components/Support";
 import RootStackScreen from "./components/RootStackScreen";
 
-const Drawer = createDrawerNavigator();
+// const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
