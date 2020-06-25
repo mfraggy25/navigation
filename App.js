@@ -24,23 +24,23 @@ import Settings from "./components/Settings";
 import Support from "./components/Support";
 import RootStackScreen from "./components/RootStackScreen";
 
-// const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     <NavigationContainer theme={DarkTheme}>
-      <RootStackScreen />
+      {/* <RootStackScreen /> */}
       {/* <StackNavigator /> */}
       {/* <MaterialTopTabs /> */}
       {/* <MaterialBottomTabs /> */}
       {/* <MyDrawer /> */}
       {/* <MainTabScreen /> */}
-      {/* <Drawer.Navigator drawerContent={(props) => <MyDrawer {...props} />}>
+      <Drawer.Navigator drawerContent={(props) => <MyDrawer {...props} />}>
         <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
         <Drawer.Screen name="BookmarkScreen" component={Bookmark} />
         <Drawer.Screen name="SettingScreen" component={Settings} />
         <Drawer.Screen name="SupportScreen" component={Support} />
-      </Drawer.Navigator> */}
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
